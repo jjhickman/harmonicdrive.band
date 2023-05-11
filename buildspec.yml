@@ -16,7 +16,7 @@ phases:
         - cd $CODEBUILD_SRC_DIR; yarn build
   post_build:
     commands:
-      - cd - cd $CODEBUILD_SRC_DIR/build; zip -r ../app.zip *
+      - cd $CODEBUILD_SRC_DIR/build; zip -r ../app.zip *
 artifacts:
   # include all files required to run application
   # notably excluded is node_modules, as this will cause overwrite error on deploy
