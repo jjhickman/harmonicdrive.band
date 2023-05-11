@@ -15,8 +15,9 @@ phases:
       - yarn build
   post_build:
     commands:
-      - echo post_build
+      - mv build/**/* ./
+      - mv build/* ./
+      - rm -R build *.yml LICENSE README* .git*
 artifacts:
   files:
     - '**/*'
-  base-directory: build
