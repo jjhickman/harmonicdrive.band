@@ -8,17 +8,17 @@ phases:
     commands:
         # install npm
         - npm install -g yarn
-        - cd $CODEBUILD_SRC_DIR; yarn install
+        - yarn install
        
   build:
     commands:
         # run build script
-        - cd $CODEBUILD_SRC_DIR; yarn build
+        - yarn build
   post_build:
     commands:
-      - cd $CODEBUILD_SRC_DIR/build; zip -r ../app.zip *
+      zip -r ./app.zip ./build/*
 artifacts:
   # include all files required to run application
   # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
-    - app.zip
+    - ./app.zip
