@@ -14,11 +14,8 @@ phases:
     commands:
         # run build script
         - yarn build
-  post_build:
-    commands:
-      zip -r ./app.zip ./build/*
 artifacts:
   # include all files required to run application
   # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
-    - ./app.zip
+    - ./build/*
