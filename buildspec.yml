@@ -4,16 +4,13 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
-   
     commands:
         - npm install -g yarn
         - yarn install
   build:
     commands:
-        - yarn build
-    
+        - yarn build 
 artifacts:
-  # include all files required to run application
-  # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
-    - build/**/*
+    - "build/*" 
+    - "build/**/*""
