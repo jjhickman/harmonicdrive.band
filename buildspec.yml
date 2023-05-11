@@ -7,9 +7,15 @@ phases:
     commands:
       - npm install -g yarn
       - yarn install
+  pre_build:
+    commands:
+      - echo pre_build
   build:
     commands:
       - yarn build
+  post_build:
+    commands:
+      - echo post_build
 artifacts:
   files:
     - build/*
