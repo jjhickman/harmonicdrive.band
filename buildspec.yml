@@ -10,7 +10,7 @@ phases:
   build:
     commands:
       - yarn build
-  artifacts:
-    files:
-      - "build/*"
-      - "build/**/*"
+artifacts:
+  files:
+    - build/*
+    - build/**/*
