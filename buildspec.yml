@@ -5,12 +5,12 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-        - npm install -g yarn
-        - yarn install
+      - npm install -g yarn
+      - yarn install
   build:
     commands:
-        - yarn build 
-artifacts:
-  files:
-    - "build/*" 
-    - "build/**/*""
+      - yarn build 
+  artifacts:
+    files:
+      - "build/*" 
+      - "build/**/*""
